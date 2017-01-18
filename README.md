@@ -1,0 +1,2 @@
+# lxdsnap
+Automatic LXD snapshotting

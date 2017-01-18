@@ -15,9 +15,14 @@ After the new snapshot has been created, old ones will be removed, except:
 Deploy:
 
     $ git clone https://github.com/jdavid/lxdsnap.git
-    $ cd lxdnap
+    $ cd lxdsnap
     $ make install
 
-Add a cronjob to run snap.py once an hour.
+Add a cronjob to run snap.py once an hour:
+
+    $ crontab -e
+    [...]
+    # LXD Snapshots, once an hour
+    30 * * * * /home/admin/lxdsnap/venv/bin/python /home/admin/lxdsnap/snap.py
 
 Remember the user running the job must belong to the lxd group.

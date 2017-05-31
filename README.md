@@ -26,3 +26,19 @@ Add a cronjob to run snap.py once an hour:
     30 * * * * /home/admin/lxdsnap/venv/bin/python /home/admin/lxdsnap/snap.py
 
 Remember the user running the job must belong to the lxd group.
+
+## Issues
+
+I had issues with the snapshots taking too much resources and sometimes
+processes dying. This may be related to my stack, your mileage may vary.
+So be careful.
+
+My recommendations:
+
+- Use latest version of LXD.
+
+- Avoid making snapshots of containers with sub-volumes (e.g. docker inside
+  lxd), or at least test carefully.
+
+- Start with a low rate, like snapshot once a day when the load is low, and
+  increase if you don't see load spikes.

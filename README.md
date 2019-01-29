@@ -1,7 +1,7 @@
 # lxdsnap
 Automatic LXD snapshotting
 
-Creates an snapashot of every LXD container in the localhost, once an hour.
+Creates an snapshot of every LXD container in the localhost, once an hour.
 The name of the snapshot has the format YYYYMMDD-HH.
 
 After the new snapshot has been created, old ones will be removed, except:
